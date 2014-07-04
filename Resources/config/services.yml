@@ -1,0 +1,16 @@
+parameters:
+    dlin.array_conversion_bundle.metadata_factory.class: Metadata\MetadataFactory
+    dlin.array_conversion_bundle.metadata.annotation_driver.class: Dlin\Bundle\ArrayConversionBundle\Metadata\Driver\AnnotationDriver
+
+services:
+    dlin.array_conversion_bundle.metadata.annotation_driver:
+      class: %dlin.array_conversion_bundle.metadata.annotation_driver.class%
+      arguments: [@annotation_reader]
+
+    dlin.array_conversion_bundle.metadata_factory:
+      class: %dlin.array_conversion_bundle.metadata_factory.class%
+      arguments: [@dlin.array_conversion_bundle.metadata.annotation_driver]
+
+    dlin.array_converter:
+      class: Dlin\Bundle\ArrayConversionBundle\Service\ArrayConverter
+      arguments: [@dlin.array_conversion_bundle.metadata_factory]

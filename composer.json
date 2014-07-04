@@ -1,0 +1,35 @@
+{
+    "name": "dlin/array-converter-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony2 Bundle supporting Object/Array conversion using annotation",
+    "keywords": ["serialize", "array", "toArray"],
+    "license": "MIT",
+    "version": "0.1",
+    "homepage": "http://dlin.me",
+    "authors": [
+        {
+            "name": "David Lin",
+            "email": "davidforest@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.8",
+        "jms/metadata": "~1.5.0"
+
+
+    },
+    "require-dev": {
+        "symfony/framework-bundle": ">=2.0",
+        "symfony/finder": "2.3.*",
+        "phpunit/phpunit": "3.7.*"
+    },
+
+    "autoload": {
+        "psr-0": { "Dlin\\Bundle\\ArrayConversionBundle": "" }
+    },
+
+    "minimum-stability": "dev",
+    "target-dir": "Dlin/Bundle/ArrayConversionBundle"
+
+
+}
