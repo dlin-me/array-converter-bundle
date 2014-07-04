@@ -36,9 +36,7 @@ class ArrayConversion {
      */
     public function __construct(array $data)
     {
-        if(isset($data['value'])){
-            $data['key'] = $data['value'];
-        }
+
 
         foreach ($data as $key => $value) {
             if (!property_exists($this, $key)) {

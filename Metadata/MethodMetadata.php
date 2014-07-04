@@ -18,4 +18,24 @@ class MethodMetadata extends \Metadata\MethodMetadata{
 
     public $key;
     public $groups;
+
+
+    public function serialize()
+    {
+        return serialize(array(
+                        $this->class,
+                        $this->name,
+                        $this->key,
+                        $this->groups,
+                ));
+    }
+
+    public function unserialize($str)
+    {
+        list($this->class, $this->name, $this->key, $this->groups) = unserialize($str);
+        $this->reflection = new \ReflectionMethod($this->class, $this->name);
+
+        $this->reflection->setAccessible(true);
+    }
+
 }

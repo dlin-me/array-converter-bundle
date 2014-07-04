@@ -35,6 +35,20 @@ class DlinArrayConversionExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
+
+        // probably make this configurable...
+        $cacheDirectory = '%kernel.cache_dir%/dlin/ArrayConversionBundle/metadata';
+        $cacheDirectory = $container->getParameterBag()->resolveValue($cacheDirectory);
+        if (!is_dir($cacheDirectory)) {
+            mkdir($cacheDirectory, 0777, true);
+        }
+
+        // the cache directory should be the first argument of the cache service
+        $container
+                ->getDefinition('dlin.array_converter.metadata.cache')
+                ->replaceArgument(0, $cacheDirectory)
+        ;
+
     }
 }
 

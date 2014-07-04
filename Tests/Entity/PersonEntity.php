@@ -16,7 +16,7 @@ use \Dlin\Bundle\ArrayConversionBundle\Annotation\ArrayConversion;
 class PersonEntity {
 
     /**
-     * @ArrayConversion(  groups={"read", "write"})
+     * @ArrayConversion( key="first", groups={"read", "write"})
      */
     private $firstName;
 

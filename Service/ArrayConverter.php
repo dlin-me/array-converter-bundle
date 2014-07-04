@@ -14,6 +14,7 @@ namespace Dlin\Bundle\ArrayConversionBundle\Service;
 
 use Metadata\MetadataFactoryInterface;
 
+
 class ArrayConverter {
 
 
@@ -22,10 +23,7 @@ class ArrayConverter {
     public function __construct(MetadataFactoryInterface $metadataFactory)
     {
         $this->metadataFactory = $metadataFactory;
-        \Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace(
-                'JDlin\Bundle\ArrayConversionBundle\Annotation',
-                __DIR__.'/../Annotation'
-        );
+
     }
 
     /**
