@@ -83,10 +83,11 @@ class ArrayConverter {
      * @param $object array|object
      * @param $groups array groups you want to include or exclude. e.g. array('read', '-write')
      * @param $keys array Extra keys you want to include or exclude. e.g. array('name' '-password')
+     * @param $keepNull boolean Option to keep null item from the result array, default false
      * @return mixed
      * @throws \InvalidArgumentException
      */
-    public function objectToArray($object, $groups, $keys=array()){
+    public function objectToArray($object, $groups, $keys=array(), $keepNull=false){
 
 
 
@@ -120,10 +121,7 @@ class ArrayConverter {
             }
         }
 
-
-
-        return $result;
-
+        return $keepNull ?  $result: array_filter($result);
 
     }
 
