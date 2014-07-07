@@ -141,6 +141,12 @@ Getting the service in a ContainerAwareService
 
 Using the method "toArray"
 
+The "toArray" method converts an annotated object into an array. It accepts 3 parameters:
+1. The object
+2. Array of group names. properties with matching group name with go to the result array. You can prefix a group name with '-' to exclude fields with that group. E.g. ['user', '-adminuser'] will include properties
+   marked as in the user group but not in the adminuser group. If a property is marked as in both groups, it will not go into the resulting array.
+3. Array of property keys to include/exclude. You can override the group selection by passing this to the 'toArray' method. E.g. ['username', '-password'] will include the property 'username' and exclude 'password' regardless how group names match.
+
 
 
     $person = new PersonEntity();
@@ -156,6 +162,13 @@ Using the method "toArray"
 
 
 Using the method "fromArray"
+
+The "fromArray" method 'hydrate' an object using values of a given array. It accepts 2 parameters
+1. The object
+2. Array of group names. properties with matching group name with be hydrated if value is found from the given array. You can prefix a group name with '-' to exclude fields with that group. E.g. ['user', '-adminuser'] will update properties marked as in the user group but not in the adminuser group. If a property is marked as in both groups, it will not be updated
+
+Unlike the "toArray" method, it does not accept the third parameter to override group selection.
+
 
     $person = new PersonEntity();
     $person->setFirstName('Hello');
