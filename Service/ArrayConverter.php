@@ -57,17 +57,38 @@ class ArrayConverter {
     }
 
 
+    /**
+     * This is facade for toArray
+     * @param $object  object|array
+     * @param $groups
+     * @param array $keys
+     */
+    public function toArray($object, $groups, $keys=array()){
+        if(is_array($object)){
+            $res  =array();
+            foreach($object as $obj){
+                $res[] =  $this->objectToArray($obj, $groups, $keys);
+            }
+            return $res;
+        }else{
+            return $this->objectToArray($object, $groups, $keys);
+        }
+    }
+
+
 
     /**
      * Converts an object into array
      *
-     * @param $object
+     * @param $object array|object
      * @param $groups array groups you want to include or exclude. e.g. array('read', '-write')
      * @param $keys array Extra keys you want to include or exclude. e.g. array('name' '-password')
      * @return mixed
      * @throws \InvalidArgumentException
      */
-    public function toArray($object, $groups, $keys=array()){
+    public function objectToArray($object, $groups, $keys=array()){
+
+
 
         if (!is_object($object)) {
             throw new \InvalidArgumentException('No object provided');
