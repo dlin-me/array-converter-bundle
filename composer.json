@@ -2,9 +2,8 @@
     "name": "dlin/array-converter-bundle",
     "type": "symfony-bundle",
     "description": "A Symfony2 Bundle supporting Object/Array conversion using annotation",
-    "keywords": ["serialize", "array", "toArray"],
+    "keywords": ["serialize", "array", "toArray", "fromArray"],
     "license": "MIT",
-    "version": "0.1",
     "homepage": "http://dlin.me",
     "authors": [
         {

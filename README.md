@@ -1,8 +1,34 @@
 Dlin Array Conversion Bundle
 =========
-
-
 Dlin Symfony Array Conversions Bundle
+
+Building a RESTFul API with Symfony2 ? You might have tried the FriendsOfSymfony/FOSRestBundle Bundle.
+
+If you are like me, you will probably think that FriendsOfSymfony/FOSRestBundle is awesome but it is complicated and it does not support something you really want.
+
+You want to change the way it works but you can't without modifying the bundle.
+
+Let's think again what you really need for building a RESTful API:
+
+* Content Negotiation ?
+  Do you really need that ? All my recently built API supports only JSON, no negotiation.
+  If you don't need content negotiation, the good news is that Symfony itself does the routing very well, you can simple use normal controller for API endpoints
+
+* Serialization, i.e. convert to array and then JSON
+  This is important. You really need this not only for Doctrine Entities but also any objects.
+  You sometimes want to wrap your response with extra details, for metadata or error details.
+  You sometimes want to also expose data through getter functions.
+  You sometimes want to use a different field names.
+  You also want to be able to process submitted data from User and update the Entity objects easily
+  Symfony has a good JsonResponse class for returning JSON response.
+
+* Permission control
+  You want some fields of the resource be updatable/readable based on the Role of the current user.
+  Symfony has built in support for Role based permission control.
+
+
+It looks like the only part that Symfony lacks, is an easy way to convert an Entitie/Object to an array and 'hydrate' an Entity with an array.
+Dlin/ArrayConverter does only the array conversion part, and it does it well. For the rest parts, Symfony itself is enough to rescue.
 
 
 
@@ -122,7 +148,7 @@ Using the method "toArray"
     $person->setLastName('Kitty');
     $person->setAge(12);
 
-    $res = $this->converter->toArray($person, array('read')); #at least a group must given, otherwise empty array returns
+    $res = $converter->toArray($person, array('read')); #at least a group must given, otherwise empty array returns
 
     //$this->assertEquals($res['firstName'], $person->getFirstName());
     //$this->assertEquals($res['last'], $person->getLastName());
@@ -138,7 +164,7 @@ Using the method "fromArray"
 
     $array = array('firstName'=>'New Name', 'age'=>13);
 
-    $this->converter->fromArray($person, $array, array('write')); #must specify a or more group
+    $converter->fromArray($person, $array, array('write')); #must specify a or more group
 
     //$this->assertEquals("New Name", $person->getFirstName());
     //$this->assertEquals(13, $person->getAge());
