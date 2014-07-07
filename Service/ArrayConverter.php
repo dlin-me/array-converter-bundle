@@ -12,16 +12,22 @@
 namespace Dlin\Bundle\ArrayConversionBundle\Service;
 
 
+use Dlin\Bundle\ArrayConversionBundle\Metadata\MetadataFactory;
 use Metadata\MetadataFactoryInterface;
 
-
+include_once __DIR__.'/../Annotation/ArrayConversion.php';
 class ArrayConverter {
 
-
+    /**
+     * @var \Dlin\Bundle\ArrayConversionBundle\Metadata\MetadataFactory $metadataFactory
+     */
     private $metadataFactory;
 
-    public function __construct(MetadataFactoryInterface $metadataFactory)
+    public function __construct(MetadataFactory $metadataFactory)
     {
+        /**
+         * @var \Dlin\Bundle\ArrayConversionBundle\Metadata\MetadataFactory $metadataFactory
+         */
         $this->metadataFactory = $metadataFactory;
 
     }
@@ -39,7 +45,9 @@ class ArrayConverter {
         if (!is_object($object)) {
             throw new \InvalidArgumentException('No object provided');
         }
+
         $classMetadata = $this->metadataFactory->getMetadataForClass(get_class($object));
+        $classMetadata->fileResources[] = $this->metadataFactory->getCache()->getCachePath(get_class($object)) ; //path to the cache
 
 
         $result = array();
@@ -104,7 +112,8 @@ class ArrayConverter {
              */
             foreach ($classMetadata->methodMetadata as $methodMetadata) {
                 if (isset($methodMetadata->groups) && count(array_intersect($methodMetadata->groups, $groups)) > 0) {
-                    if($key == $propertyMetadata->key){
+                    if($key == $methodMetadata->key){
+
                         $methodMetadata->invoke($object, array($value));
                     }
                 }

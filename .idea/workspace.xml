@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ba4f10b-1e03-4189-b242-88c3a0ea8974" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annotation/ArrayConversion.php" afterPath="$PROJECT_DIR$/Annotation/ArrayConversion.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Metadata/MetadataFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Service/ArrayConverter.php" afterPath="$PROJECT_DIR$/Service/ArrayConverter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php" afterPath="$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/DependencyInjection/Configuration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php" afterPath="$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metadata/MethodMetadata.php" afterPath="$PROJECT_DIR$/Metadata/MethodMetadata.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/Entity/PersonEntity.php" afterPath="$PROJECT_DIR$/Tests/Entity/PersonEntity.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metadata/PropertyMetadata.php" afterPath="$PROJECT_DIR$/Metadata/PropertyMetadata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/Entity/UserEntity.php" afterPath="$PROJECT_DIR$/Tests/Entity/UserEntity.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/config/services.yml" afterPath="$PROJECT_DIR$/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/snappy.iml" afterPath="$PROJECT_DIR$/.idea/snappy.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snappy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,31 +37,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArrayConverter.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ArrayConverter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Service/ArrayConverter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="113" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.4582744" vertical-offset="738" max-vertical-offset="2322">
+            <state line="108" column="0" selection-start="3249" selection-end="3249" vertical-scroll-proportion="-66.666664" vertical-offset="0" max-vertical-offset="2340">
               <folding>
-                <element signature="e#6#154#0" expanded="true" />
+                <element signature="e#211#274#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonEntity.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/Entity/PersonEntity.php">
+      <file leaf-file-name="UserEntity.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Entity/UserEntity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1710">
+            <state line="26" column="43" selection-start="446" selection-end="446" vertical-scroll-proportion="-12.0" vertical-offset="144" max-vertical-offset="1296">
+              <folding>
+                <element signature="e#6#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="0" selection-start="4047" selection-end="4047" vertical-scroll-proportion="0.85714287" vertical-offset="2106" max-vertical-offset="3042">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropertyMetadata.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Metadata/PropertyMetadata.php">
+      <file leaf-file-name="ArrayConverterTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="29" selection-start="719" selection-end="719" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="612">
-              <folding />
+            <state line="96" column="44" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-9.849056" vertical-offset="1206" max-vertical-offset="2304">
+              <folding>
+                <element signature="e#6#153#0" expanded="true" />
+                <element signature="e#215#279#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,22 +86,8 @@
       <file leaf-file-name="DlinArrayConversionExtension.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="8" selection-start="1273" selection-end="1273" vertical-scroll-proportion="-15.333333" vertical-offset="324" max-vertical-offset="1080">
-              <folding>
-                <element signature="e#6#153#0" expanded="true" />
-                <element signature="e#221#280#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DependencyInjection/Configuration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="612">
-              <folding>
-                <element signature="e#73#133#0" expanded="true" />
-              </folding>
+            <state line="43" column="47" selection-start="1353" selection-end="1353" vertical-scroll-proportion="-17.666666" vertical-offset="99" max-vertical-offset="900">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,19 +95,36 @@
       <file leaf-file-name="services.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+            <state line="16" column="24" selection-start="893" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnnotationDriver.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Metadata/Driver/AnnotationDriver.php">
+      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DependencyInjection/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="43" selection-start="1899" selection-end="1899" vertical-scroll-proportion="-8.333333" vertical-offset="855" max-vertical-offset="1638">
+            <state line="19" column="41" selection-start="613" selection-end="613" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonEntity.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Entity/PersonEntity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="210" selection-end="760" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="1746">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MetadataFactory.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Metadata/MetadataFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="29" selection-start="370" selection-end="370" vertical-scroll-proportion="-4.3333335" vertical-offset="99" max-vertical-offset="882">
               <folding>
-                <element signature="e#6#154#0" expanded="true" />
-                <element signature="e#219#281#0" expanded="true" />
+                <element signature="e#208#242#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,28 +133,8 @@
       <file leaf-file-name="MethodMetadata.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Metadata/MethodMetadata.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="75" selection-start="763" selection-end="763" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="684">
+            <state line="32" column="37" selection-start="592" selection-end="592" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="684">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MethodMetadata.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MethodMetadata.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1078" selection-end="1192" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="1080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayConversion.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Annotation/ArrayConversion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="7" selection-start="426" selection-end="426" vertical-scroll-proportion="2.0" vertical-offset="576" max-vertical-offset="1350">
-              <folding>
-                <element signature="e#6#154#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -159,30 +163,34 @@
         <option value="$PROJECT_DIR$/Tests/Service/PdfServiceTest.php" />
         <option value="$PROJECT_DIR$/Tests/Entity/PersionEntity.php" />
         <option value="$PROJECT_DIR$/Tests/config/default.yml" />
-        <option value="$PROJECT_DIR$/Tests/AppKernel.php" />
         <option value="$PROJECT_DIR$/Tests/bootstrap.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Tests/Entity/UserEntity.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Metadata/PropertyMetadata.php" />
-        <option value="$PROJECT_DIR$/Tests/Entity/PersonEntity.php" />
         <option value="$PROJECT_DIR$/Annotation/ArrayConversion.php" />
-        <option value="$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php" />
-        <option value="$PROJECT_DIR$/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php" />
         <option value="$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MethodMetadata.php" />
+        <option value="$PROJECT_DIR$/DependencyInjection/Configuration.php" />
+        <option value="$PROJECT_DIR$/Metadata/PropertyMetadata.php" />
+        <option value="$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php" />
         <option value="$PROJECT_DIR$/Metadata/MethodMetadata.php" />
+        <option value="$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MetadataFactory.php" />
+        <option value="$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/ClassMetadata.php" />
+        <option value="$PROJECT_DIR$/Metadata/MetadataFactory.php" />
+        <option value="$PROJECT_DIR$/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/Metadata/Cache/FileCache.php" />
+        <option value="$PROJECT_DIR$/Tests/AppKernel.php" />
+        <option value="$PROJECT_DIR$/Tests/Entity/PersonEntity.php" />
         <option value="$PROJECT_DIR$/Service/ArrayConverter.php" />
+        <option value="$PROJECT_DIR$/Tests/Entity/UserEntity.php" />
+        <option value="$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="116" />
-    <option name="y" value="80" />
+    <option name="x" value="24" />
+    <option name="y" value="39" />
     <option name="width" value="2560" />
     <option name="height" value="1328" />
   </component>
@@ -212,6 +220,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,72 +236,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ArraySerializerBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snappy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArraySerializerBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snappy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArraySerializerBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snappy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArraySerializerBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Metadata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,6 +395,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Metadata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snappy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArraySerializerBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="DependencyInjection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -472,7 +433,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,7 +509,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="116" y="80" width="2560" height="1328" extended-state="6" />
+    <frame x="24" y="39" width="2560" height="1328" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -558,18 +518,18 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25377283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25575852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -589,61 +549,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2214">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2214">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/Driver/DriverInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="855" selection-end="855" vertical-scroll-proportion="0.23376623" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/doc/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1182">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Reflection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="942" column="37" selection-start="26896" selection-end="26923" vertical-scroll-proportion="-8.0" vertical-offset="16740" max-vertical-offset="31248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/PropertyMetadata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="6" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.7380952" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
@@ -662,20 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/config/twig.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
@@ -690,26 +584,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="2124">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="214" column="0" selection-start="7068" selection-end="7068" vertical-scroll-proportion="0.60714287" vertical-offset="3033" max-vertical-offset="6660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MetadataFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="3656" selection-end="3656" vertical-scroll-proportion="-9.333333" vertical-offset="1314" max-vertical-offset="3564">
           <folding />
         </state>
       </provider>
@@ -724,13 +601,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="792" column="0" selection-start="27975" selection-end="27975" vertical-scroll-proportion="-8.666667" vertical-offset="13662" max-vertical-offset="20286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
@@ -756,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/config/doctrine.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DlinArrayConversionBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="432">
@@ -784,9 +647,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationRegistry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="7" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.4642857" vertical-offset="819" max-vertical-offset="2538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="265" selection-end="265" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection/Extension/Extension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="3228" selection-end="3228" vertical-scroll-proportion="-12.333333" vertical-offset="1323" max-vertical-offset="2106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/config/Symfony/Component/Config/Definition/Processor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="-9.333333" vertical-offset="522" max-vertical-offset="1728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/config/default.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/config/doctrine.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="4" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/config/twig.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="85" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
           <folding />
         </state>
       </provider>
@@ -798,25 +710,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/PropertyMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="24" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-7.6603775" vertical-offset="530" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/ClassHierarchyMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MetadataFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="6" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.4665757" vertical-offset="0" max-vertical-offset="733">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/AdvancedMetadataFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.52380955" vertical-offset="0" max-vertical-offset="756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/tests/Metadata/Tests/MergeableClassMetadataTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="30" selection-start="211" selection-end="330" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/tests/Metadata/Tests/ClassMetadataTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="34" selection-start="902" selection-end="902" vertical-scroll-proportion="-19.0" vertical-offset="27" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Annotation/ArrayConversion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="9" selection-start="812" selection-end="812" vertical-scroll-proportion="-20.666666" vertical-offset="108" max-vertical-offset="1206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MergeableClassMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="829" selection-end="829" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MergeableInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/Cache/CacheInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="462" selection-end="462" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Metadata/PropertyMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="37" selection-start="529" selection-end="529" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/ClassMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="37" selection-start="1705" selection-end="1718" vertical-scroll-proportion="-26.666666" vertical-offset="378" max-vertical-offset="1890">
+          <folding>
+            <element signature="e#7#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/Cache/FileCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.6792453" vertical-offset="72" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MetadataFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="50" selection-start="1914" selection-end="1924" vertical-scroll-proportion="72.666664" vertical-offset="2844" max-vertical-offset="3600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Metadata/Cache/FileCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="417" selection-end="429" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="16" selection-start="789" selection-end="789" vertical-scroll-proportion="-11.0" vertical-offset="153" max-vertical-offset="936">
+        <state line="27" column="9" selection-start="624" selection-end="624" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="936">
           <folding>
             <element signature="e#202#246#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationRegistry.php">
+    <entry file="file://$PROJECT_DIR$/Metadata/Driver/AnnotationDriver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="7" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.4642857" vertical-offset="819" max-vertical-offset="2538">
+        <state line="23" column="55" selection-start="578" selection-end="578" vertical-scroll-proportion="-7.3333335" vertical-offset="72" max-vertical-offset="1494">
+          <folding>
+            <element signature="e#219#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MethodMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1418" selection-end="1418" vertical-scroll-proportion="-15.0" vertical-offset="549" max-vertical-offset="1332">
+          <folding>
+            <element signature="e#7#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Metadata/MetadataFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="370" selection-end="370" vertical-scroll-proportion="-4.3333335" vertical-offset="99" max-vertical-offset="882">
+          <folding>
+            <element signature="e#208#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Metadata/MethodMetadata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="37" selection-start="592" selection-end="592" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Service/ArrayConverter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="3249" selection-end="3249" vertical-scroll-proportion="-66.666664" vertical-offset="0" max-vertical-offset="2340">
+          <folding>
+            <element signature="e#211#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="47" selection-start="1353" selection-end="1353" vertical-scroll-proportion="-17.666666" vertical-offset="99" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="613" selection-end="613" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="24" selection-start="893" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Entity/PersonEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="210" selection-end="760" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="1746">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Entity/UserEntity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="39" selection-start="441" selection-end="441" vertical-scroll-proportion="0.47619048" vertical-offset="108" max-vertical-offset="1296">
+        <state line="26" column="43" selection-start="446" selection-end="446" vertical-scroll-proportion="-12.0" vertical-offset="144" max-vertical-offset="1296">
           <folding>
             <element signature="e#6#149#0" expanded="true" />
           </folding>
@@ -825,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Service/ArrayConverterTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="560" selection-end="560" vertical-scroll-proportion="0.47619048" vertical-offset="126" max-vertical-offset="1278">
+        <state line="96" column="44" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-9.849056" vertical-offset="1206" max-vertical-offset="2304">
           <folding>
             <element signature="e#6#153#0" expanded="true" />
             <element signature="e#215#279#0" expanded="true" />
@@ -833,85 +916,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Entity/PersonEntity.php">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1710">
+        <state line="153" column="0" selection-start="4047" selection-end="4047" vertical-scroll-proportion="0.85714287" vertical-offset="2106" max-vertical-offset="3042">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="614" selection-end="614" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="e#73#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Annotation/ArrayConversion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="7" selection-start="426" selection-end="426" vertical-scroll-proportion="2.0" vertical-offset="576" max-vertical-offset="1350">
-          <folding>
-            <element signature="e#6#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/metadata/src/Metadata/MethodMetadata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1078" selection-end="1192" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Metadata/MethodMetadata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="75" selection-start="763" selection-end="763" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Metadata/Driver/AnnotationDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="43" selection-start="1899" selection-end="1899" vertical-scroll-proportion="-8.333333" vertical-offset="855" max-vertical-offset="1638">
-          <folding>
-            <element signature="e#6#154#0" expanded="true" />
-            <element signature="e#219#281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Metadata/PropertyMetadata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="719" selection-end="719" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DependencyInjection/DlinArrayConversionExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="8" selection-start="1273" selection-end="1273" vertical-scroll-proportion="-15.333333" vertical-offset="324" max-vertical-offset="1080">
-          <folding>
-            <element signature="e#6#153#0" expanded="true" />
-            <element signature="e#221#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Service/ArrayConverter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="113" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.4582744" vertical-offset="738" max-vertical-offset="2322">
-          <folding>
-            <element signature="e#6#154#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

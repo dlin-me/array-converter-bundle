@@ -39,6 +39,7 @@ class DlinArrayConversionExtension extends Extension
         // probably make this configurable...
         $cacheDirectory = '%kernel.cache_dir%/dlin/ArrayConversionBundle/metadata';
         $cacheDirectory = $container->getParameterBag()->resolveValue($cacheDirectory);
+
         if (!is_dir($cacheDirectory)) {
             mkdir($cacheDirectory, 0777, true);
         }

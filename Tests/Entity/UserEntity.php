@@ -18,13 +18,13 @@ use Dlin\Bundle\ArrayConversionBundle\Annotation\ArrayConversion as AC;
 class UserEntity extends PersonEntity{
 
     /**
-     * @AC(group=["write"])
+     * @AC(groups={"write"})
      */
     private $password;
 
 
     /**
-     * @AC("username", group={"write"})
+     * @AC(key="username", groups={"read"})
      */
     private $email;
 

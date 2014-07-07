@@ -16,16 +16,18 @@ use \Dlin\Bundle\ArrayConversionBundle\Annotation\ArrayConversion;
 class PersonEntity {
 
     /**
-     * @ArrayConversion( key="first", groups={"read", "write"})
+     * @ArrayConversion( groups={"read", "write"})
      */
     private $firstName;
 
     /**
-     * @ArrayConversion(  groups={"read", "write"})
+     * @ArrayConversion( key="last", groups={"read", "write"})
      */
     private $lastName;
 
-
+    /**
+     * @ArrayConversion( key="age", groups={ "write"})
+     */
     private $age;
 
 

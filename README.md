@@ -35,24 +35,71 @@ Enable the bundle in you AppKernel.php
     {
         $bundles = array(
         ...
-        new Dlin\Bundle\ArrayConversionBuddle\DlinSArrayConversionBundle(),
+        new Dlin\Bundle\ArrayConversionBuddle\Dlin\ArrayConversionBundle(),
         ...
     }
 
 
-Configuration
+Annotation
 --------------
 
-You can specify the installation location of wkhtmltopdf
+There is only two annotation options 'groups' and 'key'.
+When dlin.array_converter converts an object into an associated array,
+the 'key' specified will be used as the key of the resulting. If ignored, the name of the property is used
 
-    #app/config/config.yml
+You also have the option to specify the set of keys you want to exported to
+the resulting array using a group. Example:
 
-    dlin_snappy:
-        pdf_service:
-            wkhtmltopdf: /Applications/wkhtmltopdf.app/Contents/MacOS/wkhtmltopdf
+    use \Dlin\Bundle\ArrayConversionBundle\Annotation\ArrayConversion;
+
+    class PersonEntity {
+
+        /**
+         * If 'key' not given, it use 'firstName' by default
+         * @ArrayConversion( groups={"read", "write"})
+         */
+        private $firstName;
+
+        /**
+         * You can use a different array key by specifying a different key value
+         * In this example, 'last' will be used as key instead of 'lastName' in the resulting array
+         * @ArrayConversion( key="last", groups={"read", "write"})
+         */
+        private $lastName;
+
+        /**
+         * @ArrayConversion( key="age", groups={ "write"})
+         */
+        private $age;
 
 
-For most OS, this bundle will try to download and install the wkhtmltopdf binary itself. No configuration is required unless you want to use a different wkhtmltopdf binary. For Mac servers, one will have to download the DMG file and install it. The above configuration is required.
+        /**
+         * You can also convert the result of a getter function into the resulting array,
+         * If the 'key' is not specified, the function name will be used (i.e 'getFullName') as the key in the resulting array
+         * @ArrayConversion(key="fullName", groups={"read"})
+         */
+        public function getFullName(){
+
+            return trim($this->firstName.' '.$this->lastName);
+        }
+
+        /**
+         * You can also do this for setter function.
+         * This function is called when the 'fromArray' service method is called. This is useful when you want to assign values to object
+         * using setter functions instead of setting values for the private properties directly.
+         * @ArrayConversion( key="age", groups={ "write"})
+         */
+        public function setFullName($fullname){
+            ...
+        }
+
+
+
+        ...
+    }
+
+
+
 
 
 Usage
@@ -60,44 +107,49 @@ Usage
 
 Geting the service in a controller
 
-    $pdf =  $this->get('dlin.pdf_service');
+    $converter =  $this->get('dlin.array_converter');
 
 Getting the service in a ContainerAwareService
 
-    $pdf = $this->container->get('dlin.pdf_service');
+    $converter = $this->container->get('dlin.array_converter');
 
-Using the method "createPdfFromHtml"
-
-    #Pdf will be created (replace if already exist) as file '/tmp/test.pdf'
-    $pdf->createPdfFromHtml('<html><body><h1>hello</h1></body>', '/tmp/test.pdf');
+Using the method "toArray"
 
 
-Using the method "createPdfFromUrl"
 
-    #Pdf will be created (replace if already exist) as file '/tmp/test.pdf'
-    $pdf->createPdfFromUrl('google.com', '/tmp/test.pdf');
+    $person = new PersonEntity();
+    $person->setFirstName('Hello');
+    $person->setLastName('Kitty');
+    $person->setAge(12);
+
+    $res = $this->converter->toArray($person, array('read')); #at least a group must given, otherwise empty array returns
+
+    //$this->assertEquals($res['firstName'], $person->getFirstName());
+    //$this->assertEquals($res['last'], $person->getLastName());
+    //$this->assertEquals($res['fullName'], $person->getFullName());
 
 
-Download to browser (HTTP headers will be set and script terminates)
+Using the method "fromArray"
 
-    $pdf->sendHtmlAsPdf('<html><body><h1>hello</h1></body>', 'downloadFileName.pdf');
-    #or
-    $pdf->sendUrlAsPdf('google.com', 'downloadFileName.pdf');
+    $person = new PersonEntity();
+    $person->setFirstName('Hello');
+    $person->setLastName('Kitty');
+    $person->setAge(12);
 
+    $array = array('firstName'=>'New Name', 'age'=>13);
 
-Show PDF inline in browser (HTTP headers will be set and script terminates)
+    $this->converter->fromArray($person, $array, array('write')); #must specify a or more group
 
-    $pdf->sendHtmlAsPdf('<html><body><h1>hello</h1></body>', 'downloadFileName.pdf', true);
-    #or
-    $pdf->sendUrlAsPdf('google.com', 'downloadFileName.pdf', true);
+    //$this->assertEquals("New Name", $person->getFirstName());
+    //$this->assertEquals(13, $person->getAge());
 
 
 Notes
 --------------
-* MAMP user couldl have problem using wkhtmltopdf. Please solve the problem [here](http://oneqonea.blogspot.in/2012/04/why-does-wkhtmltopdf-work-via-terminal.html)
-* Mac OSX requires its own wkhtmltopdf binnary. You can download it [here](https://code.google.com/p/wkhtmltopdf/downloads/list).
+* The 'fromArray' will set the property of the target object directly, even for private properties. To use setter/getter function, put the annotations
+  to the getter/setter functions instead.
 
-
+* You can specify multiple groups for a property, when calling 'toArray' or 'fromArray', that property is involved if any of the groups specified match any of the groups in the 'groups' parameter
 
 
 

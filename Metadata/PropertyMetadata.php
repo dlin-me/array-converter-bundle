@@ -24,7 +24,7 @@ class PropertyMetadata extends \Metadata\PropertyMetadata{
                         $this->class,
                         $this->name,
                         $this->key,
-                        $this->groups,
+                        $this->groups
                 ));
     }
 
@@ -34,4 +34,5 @@ class PropertyMetadata extends \Metadata\PropertyMetadata{
         $this->reflection = new \ReflectionProperty($this->class, $this->name);
         $this->reflection->setAccessible(true);
     }
+
 }

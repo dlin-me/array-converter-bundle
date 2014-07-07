@@ -1,7 +1,7 @@
 parameters:
-    dlin.array_conversion_bundle.metadata_factory.class: Metadata\MetadataFactory
+    dlin.array_conversion_bundle.metadata_factory.class: Dlin\Bundle\ArrayConversionBundle\Metadata\MetadataFactory
     dlin.array_conversion_bundle.metadata.annotation_driver.class: Dlin\Bundle\ArrayConversionBundle\Metadata\Driver\AnnotationDriver
-    dlin.array_conversion_bundle.metadata.cache.class: Metadata\Cache\FileCache
+    dlin.array_conversion_bundle.metadata.cache.class: Dlin\Bundle\ArrayConversionBundle\Metadata\Cache\FileCache
 
 services:
     dlin.array_conversion_bundle.metadata.annotation_driver:
@@ -10,7 +10,7 @@ services:
 
     dlin.array_conversion_bundle.metadata_factory:
       class: %dlin.array_conversion_bundle.metadata_factory.class%
-      arguments: [@dlin.array_conversion_bundle.metadata.annotation_driver]
+      arguments: [@dlin.array_conversion_bundle.metadata.annotation_driver, Metadata\ClassHierarchyMetadata, %kernel.debug%]
       calls:
         - [setCache, ["@dlin.array_converter.metadata.cache"]]
 

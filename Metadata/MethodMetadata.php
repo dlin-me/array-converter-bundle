@@ -26,7 +26,7 @@ class MethodMetadata extends \Metadata\MethodMetadata{
                         $this->class,
                         $this->name,
                         $this->key,
-                        $this->groups,
+                        $this->groups
                 ));
     }
 
