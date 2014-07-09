@@ -60,18 +60,20 @@ class ArrayConverter {
     /**
      * This is facade for toArray
      * @param $object  object|array
-     * @param $groups
-     * @param array $keys
+     * @param $groups array groups you want to include or exclude. e.g. array('read', '-write')
+     * @param $keys array Extra keys you want to include or exclude. e.g. array('name' '-password')
+     * @param $keepNull boolean Option to keep null item from the result array, default false
+     * @return array $keys
      */
-    public function toArray($object, $groups, $keys=array()){
+    public function toArray($object, $groups, $keys=array(), $keepNull=false){
         if(is_array($object)){
             $res  =array();
             foreach($object as $obj){
-                $res[] =  $this->objectToArray($obj, $groups, $keys);
+                $res[] =  $this->objectToArray($obj, $groups, $keys, $keepNull);
             }
             return $res;
         }else{
-            return $this->objectToArray($object, $groups, $keys);
+            return $this->objectToArray($object, $groups, $keys, $keepNull);
         }
     }
 
@@ -130,8 +132,7 @@ class ArrayConverter {
      *
      * @param $object
      * @param $array
-     * @param $groups array groups you want to include or exclude. e.g. array('read'=>true, 'write'=>false)
-     * @param $keys array Extra keys you want to include or exclude. e.g. array('name'=>true, 'password'=>false')
+     * @param $groups array groups you want to include or exclude. e.g. array('read', '-write')
      * @return mixed
      * @throws \InvalidArgumentException
      */

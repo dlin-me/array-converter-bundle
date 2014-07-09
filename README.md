@@ -1,41 +1,57 @@
 Dlin Array Conversion Bundle
 =========
-Dlin Symfony Array Conversions Bundle
+Dlin Symfony Array Conversion Bundle
 
-Building a RESTFul API with Symfony2 ? You might have tried the FriendsOfSymfony/FOSRestBundle Bundle.
+Building a RESTFul API with Symfony2 ? You might have tried the **FriendsOfSymfony/FOSRestBundle** Bundle.
 
-If you are like me, you will probably think that FriendsOfSymfony/FOSRestBundle is awesome but it is complicated and it does not support something you really want.
+If you are like me, you will probably think that FriendsOfSymfony/FOSRestBundle is awesome but it is complicated and it does not support the flexibility you really want.
 
-You want to change the way it works but you can't without modifying the bundle.
 
 Let's think again what you really need for building a RESTful API:
 
-* Content Negotiation ?
-  Do you really need that ? All my recently built API supports only JSON, no negotiation.
-  If you don't need content negotiation, the good news is that Symfony itself does the routing very well, you can simple use normal controller for API endpoints
+* **Content Negotiation**
 
-* Serialization, i.e. convert to array and then JSON
+  Do you really need that ? All my recently built APIs support only JSON, no negotiation.
+
+* **Resource URL Routing**
+  If you don't need content negotiation, the good news is that Symfony itself does the routing very well, you can simple use normal controller for API endpoints.
+
+* **Serialization**, i.e. convert to array and then JSON
+
   This is important. You really need this not only for Doctrine Entities but also any objects.
-  You sometimes want to wrap your response with extra details, for metadata or error details.
+
+  You sometimes want to wrap your response with extra details, e.g. metadata or error details.
+
   You sometimes want to also expose data through getter functions.
-  You sometimes want to use a different field names.
+
+  You sometimes want to use a different name as the key
+
+  Symfony2 comes with the **JsonResponse** class that automatically converts  an associate array into JSON object response body. What is missing, is the part that converts your entity/object into associate array. Dlin/Converter can help.
+
+* **Accepting Request to Updata Resource**
+
   You also want to be able to process submitted data from User and update the Entity objects easily
-  Symfony has a good JsonResponse class for returning JSON response.
 
-* Permission control
-  You want some fields of the resource be updatable/readable based on the Role of the current user.
-  Symfony has built in support for Role based permission control.
+  You want to 'hydrate' an entity/object easily using data submitted from browser. However, you normally need to manually and repeatly assign values to Entities using the many setter functions, after validating the user inputs.
+
+  Symfony2 has built-in support for validating Entities, what is missing, is an easy way to 'hydrate' entities.  Dlin/Converter can help.
 
 
-It looks like the only part that Symfony lacks, is an easy way to convert an Entitie/Object to an array and 'hydrate' an Entity with an array.
-Dlin/ArrayConverter does only the array conversion part, and it does it well. For the rest parts, Symfony itself is enough to rescue.
+* **Permission Control**
+
+  Some fields of a given resource can only be accessible by users in specific roles. For example, only Admin users can update Company's name.
+
+  Sometimes you want to control what is readable/writable based on some conditions.
+
+  Like the FOSRestBundle, Dlin/ArrayConverter support assigning '**groups**' to fields. When converting an Entity to an array or 'hydrating' an Entity from an array, you have the options to specify what fields are readable/writable by norminating what groups to include and/or exclude. You can even get more controls  by specifying what fields to be included and/or exlcuded.
+
 
 
 
 Version
 -
 
-0.1
+0.2
 
 
 ***
@@ -61,7 +77,7 @@ Enable the bundle in you AppKernel.php
     {
         $bundles = array(
         ...
-        new Dlin\Bundle\ArrayConversionBuddle\Dlin\ArrayConversionBundle(),
+        new Dlin\Bundle\ArrayConversionBuddle\DlinArrayConversionBundle(),
         ...
     }
 
@@ -69,12 +85,20 @@ Enable the bundle in you AppKernel.php
 Annotation
 --------------
 
-There is only two annotation options 'groups' and 'key'.
-When dlin.array_converter converts an object into an associated array,
-the 'key' specified will be used as the key of the resulting. If ignored, the name of the property is used
+There aer only two annotation options: '**groups**' and '**key**'.
 
-You also have the option to specify the set of keys you want to exported to
-the resulting array using a group. Example:
+The annotation is applicable to all properties and methods, **public or not**.
+
+If a method is annotated it will be called with no parameter when converting to an array. The returned value is used as the field value of the resulting array, while the method name by default will be used as the array index. When 'hydrating' an Entity/object, the method is called with one parameter.
+It is normal to add a getter function to a 'read' group, and a setter functio to a 'write' group. However, the definition of groups are entirely up to you, the developer.
+
+If an property is annotated, it will be get/set when converting between the Entity and array. Please note that private properties will also be updated.
+
+One can use the **key** option to specify a diffent key name for the property or method, and the **group** option to group multiple properties together to be refered later for permission control.
+
+If multiple property or method share the same key. The last one will overwrite others when converting **toArray**. However, all fields and methods will be set/called when 'hydrating' **fromArray**.
+
+Example:
 
     use \Dlin\Bundle\ArrayConversionBundle\Annotation\ArrayConversion;
 
@@ -139,32 +163,37 @@ Getting the service in a ContainerAwareService
 
     $converter = $this->container->get('dlin.array_converter');
 
-Using the method "toArray"
+###Using the method "toArray"
 
-The "toArray" method converts an annotated object into an array. It accepts 3 parameters:
+The "**toArray**" method converts an annotated object into an array. It accepts 3 parameters:
+
 1. The object
 2. Array of group names. properties with matching group name with go to the result array. You can prefix a group name with '-' to exclude fields with that group. E.g. ['user', '-adminuser'] will include properties
-   marked as in the user group but not in the adminuser group. If a property is marked as in both groups, it will not go into the resulting array.
+   marked as in the **user** group but not in the **adminuser** group. If a property is marked as in both groups, it will **NOT** go into the resulting array.
 3. Array of property keys to include/exclude. You can override the group selection by passing this to the 'toArray' method. E.g. ['username', '-password'] will include the property 'username' and exclude 'password' regardless how group names match.
 
+4. A boolean value. Skip properties with null/false/empty values. Default is true.
 
+Examples
 
     $person = new PersonEntity();
     $person->setFirstName('Hello');
     $person->setLastName('Kitty');
     $person->setAge(12);
 
-    $res = $converter->toArray($person, array('read')); #at least a group must given, otherwise empty array returns
+	#at least one group must given, otherwise empty array returns
+    $res = $converter->toArray($person, array('read'));
 
     //$this->assertEquals($res['firstName'], $person->getFirstName());
     //$this->assertEquals($res['last'], $person->getLastName());
     //$this->assertEquals($res['fullName'], $person->getFullName());
 
 
-Using the method "fromArray"
+###Using the method "fromArray"
 
-The "fromArray" method 'hydrate' an object using values of a given array. It accepts 2 parameters
-1. The object
+The "**fromArray**" method 'hydrate' an object using values of a given array. It accepts 2 parameters
+
+1. The object/Entity
 2. Array of group names. properties with matching group name with be hydrated if value is found from the given array. You can prefix a group name with '-' to exclude fields with that group. E.g. ['user', '-adminuser'] will update properties marked as in the user group but not in the adminuser group. If a property is marked as in both groups, it will not be updated
 
 Unlike the "toArray" method, it does not accept the third parameter to override group selection.
@@ -188,7 +217,7 @@ Notes
 * The 'fromArray' will set the property of the target object directly, even for private properties. To use setter/getter function, put the annotations
   to the getter/setter functions instead.
 
-* You can specify multiple groups for a property, when calling 'toArray' or 'fromArray', that property is involved if any of the groups specified match any of the groups in the 'groups' parameter
+
 
 
 
